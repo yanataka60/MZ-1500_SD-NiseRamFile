@@ -1,64 +1,38 @@
-# MZ-1500にSD-CARDからのアプリケーション起動、ロード、セーブ機能
+# MZ-1500_SD+偽RAMFILE複合ボード
 
-![MZ-1500_SD](https://github.com/yanataka60/MZ-1500_SD/blob/main/JPEG/TITLE.jpg)
+![MZ-1500_SD](https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/blob/main/JPEG/TITLE.JPG)
 
-MZ-1500でSD-CARDからのアプリケーション起動、BASICなどのアプリケーションからSD-CARDへのロード、セーブを実現するものです。
+MZ-1500_SDとしっぽいいんちょさんが作られた「偽RAMFILE for MZ-1500」を合体させたボードです。
 
-#### 2024.8.8 BASIC MZ-5Z001でSD対応パッチ更新しました。今のところ、LOAD、SAVEに問題は発生していません。
-#### ~~2024.8.6 BASIC MZ-5Z001でSDからのLOAD実行した後に別プログラムをLOADしようとすると高確率で暴走してしまうようです。原因調査中ですので使用にはご注意ください。~~
-#### 2024.8.5 BASIC MZ-5Z001でSDからのLOAD、SAVEに対応しました。
-#### ~~MZ-1500でSD-CARDからのアプリケーション起動、BASICなどのアプリケーションからSD-CARDへのロード、セーブを実現するものですが、現在は標準BASIC MZ-5Z001もBASICプログラムのLOAD、SAVEに対応できていませんので機械語ゲームの起動等限定的な利用になります。~~
+MZ-1500_SD: https://github.com/yanataka60/MZ-1500_SD
 
-　MZ-1500にはMZ-1R12が装備されているとS-RAMに保存されているプログラムから起動する機能がありますが、疑似的にMZ-1R12のふりをすることでMZ-1500_SDに搭載したROMからSD-CARDからアプリケーションを起動させる機能を持たせたMONITORプログラムを起動させます。
+偽RAMFILE for MZ-1500: https://github.com/shippoiincho/niseramfile
 
-　SD対応MONITORからはFD又はFDLコマンドでSDからアプリケーションをLOAD実行ができます。
+偽RAMFILEのMZ-1R12 SRAM メモリ エミュレーション機能をMZ-1500_SD起動用に使うことで一枚のボードにまとめています。
 
-　SD対応MONITORは本体ROMの1Z-009BをRAMにコピーしてうえでSD対応のプログラムを付加しています。
-
-　LOAD実行範囲は、0000h～CFFFhです。アプリケーション、ゲームを起動させるにはほぼ問題ないと思います。
-
-　ただし、多段ロード、QDソフトには対応していません。
-
-　なお、アプリケーション中でのSD-CARDとのロード、セーブについては、MZ-80Kシリーズ、MZ-1200、MZ-700、MZ-1500のすべてのアプリケーションごとにSD-CARD対応化を行う必要があります。
-
-　現在、アプリケーション中でのSD-CARDとのLOAD、SAVEに対応できているものは以下のとおりです。
-
-|アプリケーション名|備考|
-| ------------ | ------------ |
-|BASIC MZ-5Z001||
-|MZ-700用SBasic 1Z-007B||
-|ROPOKO v1.2.2||
-|ROPOKO体験版||
-|ROPOKO80K v1.1.2||
-
-　なお、Arduino、ROMへ書き込むための機器が別途必要となります。
+詳細についてはそれぞれのウェブページを参照してください。
 
 ## 回路図
-　KiCadフォルダ内のMZ-1500_SD.pdfを参照してください。
+　KiCadフォルダ内のMZ-1500_SD+NRF.pdfを参照してください。
 
-[回路図](https://github.com/yanataka60/MZ-1500_SD/blob/main/KiCad/MZ-1500_SD.pdf)
+[回路図](https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/blob/main/Kicad/MZ-1500_SD%2BNRF.pdf)
 
-![MZ-1500_SD](https://github.com/yanataka60/MZ-1500_SD/blob/main/KiCad/MZ-1500_SD.jpg)
+![MZ-1500_SD](https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/blob/main/Kicad/MZ-1500_SD%2BNRF.jpg)
 
 |番号|品名|数量|備考|
 | ------------ | ------------ | ------------ | ------------ |
 ||J2、J3のいずれか|||
 |J2|Micro_SD_Card_Kit|1|秋月電子通商 AE-microSD-LLCNV (注1)|
 |J3|MicroSD Card Adapter|1|Arduino等に使われる5V電源に対応したもの(注3)|
-|U1,U2|74LS04|2||
-|U3,U4|74LS30|2||
-|U5|74LS10|1||
-|U6|74LS14|1||
-|U7|8255|1||
-|U8|Arduino_Pro_Mini_5V|1|Atmega328版を使用 168版は不可。(注2)|
-|U9-U12|74LS193|4||
-|U13|27256/29C256/27512/27C512相当品|1|27256/29C256を使うときは、S1を5V側にして使うこと。28C256はピン配置が違うので使えません。|
-|U14|74LS245|1||
-|C1,C2,C4-C14|積層セラミックコンデンサ 0.1uF|13||
-|C3|電解コンデンサ 16v100uF|1||
-|C15|積層セラミックコンデンサ 220pF|1||
-|R1|カーボン抵抗 100Ω|1||
-|S1|3Pスライドスイッチ|1|秋月電子通商 SS12D01G4など|
+|J4,J5|ピンソケット2x15Pin|2|RP2350B用|
+|J6|D-Sub 15Pin基板取付用|1||
+|U1|74LS04|1||
+|U2|74LS30|1||
+|U3|8255|1||
+|U4|Arduino_Pro_Mini_5V|1|Atmega328版を使用 168版は不可。(注2)|
+|C1-C3|積層セラミックコンデンサ 0.1uF|3||
+|C4|電解コンデンサ 16v100uF|1||
+|R1-R3|カーボン抵抗 330Ω|3||
 ||ピンヘッダ|2Pin分|Arduino_Pro_MiniにはA4、A5用のピンヘッダが付いていないため別途調達が必要です 秋月電子通商 PH-1x40SGなど|
 ||ピンソケット(任意)|26Pin分|Arduino_Pro_Miniを取り外し可能としたい場合に調達します 秋月電子通商 FHU-1x42SGなど|
 
