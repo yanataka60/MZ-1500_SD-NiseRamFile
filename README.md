@@ -8,7 +8,7 @@ MZ-1500_SD: https://github.com/yanataka60/MZ-1500_SD
 
 偽RAMFILE for MZ-1500: https://github.com/shippoiincho/niseramfile
 
-偽RAMFILEのMZ-1R12 SRAM メモリ エミュレーション機能をMZ-1500_SD起動用に使うことで一枚のボードにまとめています。
+偽RAMFILE for MZ-1500のMZ-1R12 SRAMメモリをMZ-1500_SD起動用に使うことで一枚のボードにまとめています。
 
 機能の詳細についてはそれぞれのウェブページを参照してください。
 
@@ -52,7 +52,7 @@ MicroSD Card Adapterについているピンヘッダを除去してハンダ付
 ![MicroSD Card Adapter1](https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/blob/main/JPEG/MicroSD%20Card%20Adapter.JPG)
 
 ## 偽RAMFILE for MZ-1500の修正
-　MZ-1500_SDの起動にはMZ-1R12 SRAM メモリを利用しますが、オリジナルの偽RAMFILE for MZ-1500では電源投入時は Checksum Error で止まるようになっていますので電源投入時に起動できるように修正が必要です。
+　MZ-1500_SDの起動にはMZ-1R12 SRAMメモリを利用しますが、オリジナルの偽RAMFILE for MZ-1500では電源投入時MZ-1R12 SRAMメモリのチェックでChecksum Errorで止まるようになっていますので電源投入時にMZ-1R12 SRAMメモリから起動できるように修正が必要です。
 
 　niseramfile.cの523行あたりに
 
@@ -74,8 +74,8 @@ MicroSD Card Adapterについているピンヘッダを除去してハンダ付
 
 https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/tree/main/RP2350B
 
-## MZ-1500_SD BOOT PROGRAMをMZ-1R12 SRAM メモリ 0番バックアップスロットへ書き込み
-　MZ-1500_SDリポジトリEMMフォルダ内の1Z-009B_SD_Launcher.binをMZ-1R12 SRAM メモリ 0番バックアップスロットへ書き込んでください。
+## MZ-1500_SD BOOT PROGRAMをMZ-1R12 SRAMメモリ 0番バックアップスロットへ書き込み
+　MZ-1500_SDリポジトリEMMフォルダ内の1Z-009B_SD_Launcher.binをMZ-1R12 SRAMメモリ 0番バックアップスロットへ書き込んでください。
 
 https://github.com/yanataka60/MZ-1500_SD/blob/main/EMM/1Z-009B_SD_Launcher.bin
 
@@ -93,9 +93,11 @@ https://github.com/raspberrypi/pico-sdk-tools
 https://github.com/yanataka60/MZ-1500_SD/tree/main?tab=readme-ov-file#arduino%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0
 
 ## 運用の注意点
-　偽RAMFILE for MZ-1500のEMMエミュレーションは自動的にはバックアップされません。
+　偽RAMFILE for MZ-1500のEMMは自動的にバックアップされません。
 
-　電源ON時に0番EMMスロットの内容が自動的にEMMにLOADされますが、電源OFF時にEMMの内容は消滅しますのでEMMの内容を書き込み・修正等した場合にはEMMの内容をスロットに書き込む動作を行う必要があります。
+　電源ON時に0番EMMスロットの内容が自動的にEMMにLOADされますが、電源OFF時にEMMの内容は消滅します。
+
+　EMMの内容を書き込み・修正等した場合にはEMMの内容をスロットに書き込む動作を行う必要があります。
 
 https://github.com/shippoiincho/niseramfile/tree/main?tab=readme-ov-file#pio-3034-emm
 
