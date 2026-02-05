@@ -2,7 +2,7 @@
 
 ![MZ-1500_SD](https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/blob/main/JPEG/TITLE.JPG)
 
-MZ-1500_SDとしっぽいいんちょさんが作られた「偽RAMFILE for MZ-1500」を合体させたボードです。
+しっぽいいんちょさんが作られた「偽RAMFILE for MZ-1500」とMZ-1500_SDを合体させたボードです。
 
 MZ-1500_SD: https://github.com/yanataka60/MZ-1500_SD
 
