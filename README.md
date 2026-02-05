@@ -72,7 +72,7 @@ MicroSD Card Adapterについているピンヘッダを除去してハンダ付
 
 　なお、2026.2.5時点のソースを修正、再コンパイルしたniseramfile.uf2をRP2350Bフォルダに置いてあります。
 
-
+https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/tree/main/RP2350B
 
 ## MZ-1500_SD BOOT PROGRAMをMZ-1R12 SRAM メモリ 0番バックアップスロットへ書き込み
 　MZ-1500_SDリポジトリEMMフォルダ内の1Z-009B_SD_Launcher.binをMZ-1R12 SRAM メモリ 0番バックアップスロットへ書き込んでください。
@@ -83,9 +83,9 @@ https://github.com/yanataka60/MZ-1500_SD/blob/main/EMM/1Z-009B_SD_Launcher.bin
 
 https://github.com/shippoiincho/niseramfile/tree/main?tab=readme-ov-file#mz-1r12-sram-%E3%83%A1%E3%83%A2%E3%83%AA
 
-　なお、書き込みにpicotool.exeを利用する場合には以下からダウンロードできます。
+　なお、書き込みにpicotool.exeを利用する場合には以下のウェブページ右側の「Releases」からダウンロードできます。
 
-
+https://github.com/raspberrypi/pico-sdk-tools
 
 ## Arduinoプログラム
 　MZ-1500_SDを参照してください。
