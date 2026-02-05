@@ -839,14 +839,14 @@
 0005F2 17F2 0D                          DB  0DH
                                 
        17F3                     LNAME:
-0005F3 17F3 50494F333033345F            DB  'PIO3034_1'
-            31                  
+0005F3 17F3 50494F333033345F            DB  'PIO3034_0'
+            30                  
 0005FC 17FC 0D                          DB  0DH
        17FD                     NAME_END:
                                 
        17FD                     SNAME:
-0005FD 17FD 50494F333033342D            DB  'PIO3034-1-SAVE'
-            312D53415645        
+0005FD 17FD 50494F333033342D            DB  'PIO3034-0-SAVE'
+            302D53415645        
 00060B 180B 0D                          DB  0DH
        180C                     SNAME_END:
                                 

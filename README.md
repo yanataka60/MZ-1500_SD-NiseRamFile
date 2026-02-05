@@ -99,13 +99,6 @@ https://github.com/yanataka60/MZ-1500_SD/tree/main?tab=readme-ov-file#arduino%E3
 
 https://github.com/shippoiincho/niseramfile/tree/main?tab=readme-ov-file#pio-3034-emm
 
-## SAMPLEプログラム
-　SAMPLEフォルダ内にEMMMENU2を置きました。
-
-　使い方については、フォルダ内のREADME.mdを参照してください。
-
-　SDからEMMへLOAD、EMMの内容をSDへSAVE、EMMスロットからEMMへLOAD、EMMの内容をEMMスロットへSAVEが使えます。
-
 ## EMMからの起動
 　「EMM0」に起動可能なMZ-700用HuBASICが存在している場合MZ-1500_SDからコマンド「FDE0」を実行することで「EMM0」のMZ-700用HuBASICから起動可能です。
 
@@ -114,6 +107,13 @@ https://github.com/shippoiincho/niseramfile/tree/main?tab=readme-ov-file#pio-303
 　MZ-1500用HuBASIC、MZ-80K用HuBASICではEMMがサポートされていません。EMMが使えるのはMZ-700用HuBASICのみとなりますが、テープ版しかなくそのままではEMMにHuBASICの起動イメージを作成することが出来ません。
 
 　BouKiCHiさんのHuDiskなどを使いMZ-700用HuBASICの起動ディスクイメージを作成したうえでEMMMENUのEMMLOADでEMMに書き込む必要があります。
+
+## SAMPLEプログラム
+　SAMPLEフォルダ内にEMMMENU2を置きました。
+
+　使い方については、フォルダ内のREADME.mdを参照してください。
+
+　SDからEMMへLOAD、EMMの内容をSDへSAVE、EMMスロットからEMMへLOAD、EMMの内容をEMMスロットへSAVEが使えます。
 
 ## 謝辞
 　素晴らしい拡張モジュールを開発し、複合ボードの公開を快く承諾してくださったしっぽいいんちょさん、ありがとうございました。
