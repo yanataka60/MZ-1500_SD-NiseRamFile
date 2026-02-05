@@ -8,13 +8,13 @@ SDカードに保存されたEMM DUMPファイルはMZTファイルのヘッダ�
 
 ## 利用可能なエミュレーター
 
-### TAKEDAさんのEmuZ-700、EmuZ-1500
+### TAKEDAさんのEmuZ-1500
 
 https://takeda-toshiya.my.coocan.jp/
 
 　EMM DUMPファイルから128Byteのヘッダを除去し、EMM.BINにリネームしてエミュレーターと同じフォルダに置けばエミュレーターから利用できるようになります。
 
-　EmuZ-700、EmuZ-1500は、16MのEMM0として対応しているようです。EMM DUMPファイルから128Byteのヘッダを除去した327808Byteでも問題なく認識しますが、エミュレーターを終了させると16MByteのファイルとして再作成されます。
+　EmuZ-1500は、16MのEMM0として対応しているようです。EMM DUMPファイルから128Byteのヘッダを除去した327808Byteでも問題なく認識しますが、エミュレーターを終了させると16MByteのファイルとして再作成されます。
 
 　16MByteとして作成されたEMM.BINに128Byteのヘッダをつけて拡張子をmztとすればEMM DUMPファイルとしてEMMLOADが可能です。(LOADされるのは先頭320kByte分のみ)
 
@@ -25,21 +25,21 @@ https://takeda-toshiya.my.coocan.jp/
 
 　SD TO EMM LOAD、EMM TO SD SAVE、SLOT TO EMM LOAD、EMM TO SLOT SAVE、EXITを数字で選択します。
 
-## SD TO EMM LOAD
+### SD TO EMM LOAD
 　SDからEMMへの転送にかかる時間は約95秒です。
 
 　起動すると「FNAME:」と聞いてきますので次のうちから選択して入力します。
 
-### [SHIFT+BREAK]キー
+#### [SHIFT+BREAK]キー
 　処理が中断されたものとしてMONITOR入力待ちに戻ります。
 
-### DOSファイル名を入力せずそのまま[CR]キー
+#### DOSファイル名を入力せずそのまま[CR]キー
 　選択したEMMに対応するPIO3034_0.mztをDOSファイル名としてSDカードからEMMに転送します。
 
-### DOSファイル名を入力して[CR]キー
+#### DOSファイル名を入力して[CR]キー
 　入力されたDOSファイル名のファイルをSDカードからEMMに転送します。拡張子の「mzt」は省略可能です。
 
-### *FDL xxx[CR]キー
+#### *FDL xxx[CR]キー
 　SDカードに保存されている文字列xxxから始まるDOSファイル名を一覧表示します。xxxを省略した場合はすべてのファイルが一覧表示対象となります。
 
 　20件表示したところで指示待ちになるので打ち切るならSHIFT+BREAK又は↑を入力すると打ち切られ、Bキーで前の20件に戻ります。それ以外のキーで次の20件を表示します。
@@ -54,28 +54,28 @@ FNAME:PIO-3034EMM0[CR]
 
 FNAME:*FDL PIO[CR]
 
-## EMM TO SD SAVE
+### EMM TO SD SAVE
 　選択するとPIO3034-0-SAVE.mztというファイルがSDカードに作成されます。
 
 　同名のファイルがあると上書きされます。SDに保存されるファイル名はPIO3034-0-SAVE.mztに固定されていて指定はできません。
 
 　EMMからSDへの保存にかかる時間は約100秒です。
 
-## SLOT TO EMM LOAD
-　LOADするSLOT番号を0～9から選択します。偽RAMFILEは0～31までのSLOTが使えますがEMMMENU2では簡略化しています。
+### SLOT TO EMM LOAD
+　LOADするSLOT番号を0～9から選択します。偽RAMFILE for MZ-1500は0～31までのSLOTが使えますがEMMMENU2では簡略化しています。
 
 　OK?と聞いてくるので良ければ「Y」、やめるなら「N」を入力します。
 
 　ほぼ一瞬でLOADされます。
 
-## EMM TO SLOT SAVE
-　SAVEするSLOT番号を0～9から選択します。偽RAMFILEは0～31までのSLOTが使えますがEMMMENU2では簡略化しています。
+### EMM TO SLOT SAVE
+　SAVEするSLOT番号を0～9から選択します。偽RAMFILE for MZ-1500は0～31までのSLOTが使えますがEMMMENU2では簡略化しています。
 
 　OK?と聞いてくるので良ければ「Y」、やめるなら「N」を入力します。
 
-　MZ-1500本体のRGB出力ではほぼ一瞬で終了しますが、偽RAMFILEのVGA出力は数秒画面が乱れる・止まるなどしたのちに画面が回復します。
+　MZ-1500本体のRGB出力ではほぼ一瞬で終了しますが、偽RAMFILE for MZ-1500のVGA出力は数秒画面が乱れる・止まるなどしたのちに画面が回復します。
 
-　偽RAMFILEのVGA出力のみで運用している場合には画面が乱れてもあわてずにしばらくお待ちください。
+　偽RAMFILE for MZ-1500のVGA出力のみで運用している場合には画面が乱れてもあわてずにしばらくお待ちください。
 
 ### 追記
 　MZ-2000_SD用のEMMSAVEで時々失敗することがあり、失敗するとMZ-2000_SDからSDカードにアクセス不可能になってしまう事象が発生します。
