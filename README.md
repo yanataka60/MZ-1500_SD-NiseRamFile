@@ -119,3 +119,6 @@ https://github.com/shippoiincho/niseramfile/tree/main?tab=readme-ov-file#pio-303
 
 ## 謝辞
 　素晴らしい拡張モジュールを開発し、複合ボードの公開を快く承諾してくださったしっぽいいんちょさん、ありがとうございました。
+
+## 追記
+2026.3.1 MZ-1500_SDリポジトリEMMフォルダ内の1Z-009B_SD_Launcher.binがCHECKSUM計算前のファイルをアップしており、正常起動できませんでしたので更新しました。
