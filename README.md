@@ -25,7 +25,7 @@ MZ-1500_SD: https://github.com/yanataka60/MZ-1500_SD
 |J2|Micro_SD_Card_Kit|1|秋月電子通商 AE-microSD-LLCNV (注1)|
 |J3|MicroSD Card Adapter|1|Arduino等に使われる5V電源に対応したもの(注3)|
 |J4,J5|ピンソケット2x15Pin|2|RP2350Bマイコンボード用,秋月電子通商 FHU-2x42SGなど|
-|J6|VGA用基板ソケット 3列15ピン|1|マルツ DJ-VGA14.5など|
+|J6|VGA用基板ソケット 3列15ピン|1|マルツ DJ-VGA14.5など(注4)|
 |U1|74LS04|1||
 |U2|74LS30|1||
 |U3|8255|1||
@@ -50,6 +50,10 @@ MicroSD Card Adapterについているピンヘッダを除去してハンダ付
 ハンダ付けに自信のない方はJ2の秋月電子通商　AE-microSD-LLCNVをお使いください。AE-microSD-LLCNVならパワーLED、アクセスLEDが付いています。
 
 ![MicroSD Card Adapter1](https://github.com/yanataka60/MZ-1500_SD-NiseRamFile/blob/main/JPEG/MicroSD%20Card%20Adapter.JPG)
+
+　　　注4)VGA用基板ソケットには、ピン間隔の異なるものがあるようです。マルツ DJ-VGA14.5ではないものを購入する場合はこちらで寸法を確認してください。
+
+　　　https://www.marutsu.co.jp/contents/shop/marutsu/datasheet/DJ-VGA14.5.pdf
 
 ## 偽RAMFILE for MZ-1500の修正
 　MZ-1500_SDの起動にはMZ-1R12 SRAMメモリを利用しますが、オリジナルの偽RAMFILE for MZ-1500では電源投入時MZ-1R12 SRAMメモリのチェックでChecksum Errorで止まるようになっていますので電源投入時にMZ-1R12 SRAMメモリから起動できるように修正が必要です。
@@ -122,3 +126,5 @@ https://github.com/shippoiincho/niseramfile/tree/main?tab=readme-ov-file#pio-303
 
 ## 追記
 2026.3.1 MZ-1500_SDリポジトリEMMフォルダ内の1Z-009B_SD_Launcher.binがCHECKSUM計算前のファイルをアップしており、正常起動できませんでしたので更新しました。
+
+2026.3.19 VGA用基板ソケットに注記を追加
