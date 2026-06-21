@@ -33,6 +33,7 @@ MZ-1500_SD: https://github.com/yanataka60/MZ-1500_SD
 ||RP2350Bボード(Raspberry Pi Pico 2)|1|Amazon WA00021 RP2350Bマイコンボードなど|
 |C1-C3|積層セラミックコンデンサ 0.1uF|3||
 |C4|電解コンデンサ 16v100uF|1||
+|D1|ダイオード 1N5819|1||
 |R1-R3|カーボン抵抗 330Ω|3||
 ||ピンヘッダ|2Pin分|Arduino_Pro_MiniにはA4、A5用のピンヘッダが付いていないため別途調達が必要です 秋月電子通商 PH-1x40SGなど|
 ||ピンソケット(任意)|26Pin分|Arduino_Pro_Miniを取り外し可能としたい場合に調達します 秋月電子通商 FHU-1x42SGなど|
@@ -128,3 +129,5 @@ https://github.com/shippoiincho/niseramfile/tree/main?tab=readme-ov-file#pio-303
 2026.3.1 MZ-1500_SDリポジトリEMMフォルダ内の1Z-009B_SD_Launcher.binがCHECKSUM計算前のファイルをアップしており、正常起動できませんでしたので更新しました。
 
 2026.3.19 VGA用基板ソケットに注記を追加
+
+2026.6.21 MZ-1500_SD+偽RAMFILE複合ボードに電源が供給されている状態でUSB-Cケーブルを接続してはいけない問題に対してすーぱーたーぼさんからご指摘いただいた対策を施しました。Rev1.0基板でも通常の使用でMZ-1500_SD+偽RAMFILE複合ボードに電源が供給されている状態でUSB-Cケーブルを接続することはありませんので通常使用においてRev1.0基板でも問題ありません。
