@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "MZ-1500_SD+NiseRamFile"
 Date "2022-01-14"
-Rev "Rev1.0"
+Rev "Rev1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -884,19 +884,6 @@ Wire Wire Line
 	5850 4150 6400 4150
 $Comp
 L Connector_Generic:Conn_02x15_Top_Bottom J?
-U 1 1 69A469B4
-P 7350 7100
-AR Path="/69A38FBD/69A469B4" Ref="J?"  Part="1" 
-AR Path="/69A469B4" Ref="J4"  Part="1" 
-F 0 "J4" H 7400 8017 50  0000 C CNN
-F 1 "RP2350B Left" H 7400 7926 50  0000 C CNN
-F 2 "MZ-1500:PinHeader_2x15_P2.54mm_Vertical" H 7350 7100 50  0001 C CNN
-F 3 "~" H 7350 7100 50  0001 C CNN
-	1    7350 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x15_Top_Bottom J?
 U 1 1 69A469BA
 P 10250 7150
 AR Path="/69A38FBD/69A469BA" Ref="J?"  Part="1" 
@@ -961,8 +948,8 @@ F 3 " ~" H 12300 7550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7150 6400 6750 6400
-Text Label 6750 6400 0    50   ~ 0
+	8500 6400 8150 6400
+Text Label 8350 6400 0    50   ~ 0
 +5V
 Text Label 6750 6800 0    50   ~ 0
 D3
@@ -1063,7 +1050,6 @@ Wire Wire Line
 NoConn ~ 7650 7800
 NoConn ~ 7150 6500
 NoConn ~ 7150 6600
-NoConn ~ 7650 6400
 NoConn ~ 7650 6500
 NoConn ~ 10050 6450
 NoConn ~ 10050 6550
@@ -1242,4 +1228,31 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 5550 4150 50  0001 C CNN
 $EndComp
 Connection ~ 4050 6850
 Connection ~ 4050 8050
+$Comp
+L Connector_Generic:Conn_02x15_Top_Bottom J?
+U 1 1 69A469B4
+P 7350 7100
+AR Path="/69A38FBD/69A469B4" Ref="J?"  Part="1" 
+AR Path="/69A469B4" Ref="J4"  Part="1" 
+F 0 "J4" H 7400 8017 50  0000 C CNN
+F 1 "RP2350B Left" H 7400 7926 50  0000 C CNN
+F 2 "MZ-1500:PinHeader_2x15_P2.54mm_Vertical" H 7350 7100 50  0001 C CNN
+F 3 "~" H 7350 7100 50  0001 C CNN
+	1    7350 7100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7150 6400
+Wire Wire Line
+	7650 6400 7850 6400
+$Comp
+L Device:D D1
+U 1 1 6A206157
+P 8000 6400
+F 0 "D1" H 8000 6617 50  0000 C CNN
+F 1 "1N5819" H 8000 6526 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8000 6400 50  0001 C CNN
+F 3 "~" H 8000 6400 50  0001 C CNN
+	1    8000 6400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
